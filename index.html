@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neural Networks - じゃん拳ぽんトカゲスポーク</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <header><h1 class="title">じゃん拳ぽんトカゲスポーク!</h1></header>
+    <main>
+        <input type="hidden" id="preload"/>
+        <section class="main">
+            <div class="box">
+                <img class="avatar user" src="img/user.gif" alt="User" />
+            </div>
+            <div class="box">
+                <div class="result">
+                    <p class="winner color-green">You win</p>
+                    <p class="loser color-red">HAL wins</p>
+                    <p class="tie color-yellow">Tie</p>
+                </div>
+                <div class="ruleset">
+                    <img src="img/RPSLS.png" alt="ruleset" />
+                </div>
+            </div>
+            <div class="box">
+                <img class="avatar hal" src="img/hal9000.jpg" alt="Neural Network" />
+            </div>
+            <div class="box">
+                <div id="btnRock" class="human-action rock"></div>
+                <div id="btnPaper" class="human-action paper"></div>
+                <div id="btnScissors" class="human-action scissors"></div>
+                <div id="btnLizard" class="human-action lizard"></div>
+                <div id="btnSpock" class="human-action spock"></div>
+            </div>
+            <div class="box">
+                <div class="result-details">
+                    <p>Die Roll: <span id="dieroll"></span></p>
+                    <table class="results-table">
+                        <tr class="table-header">
+                            <td>Value</td>
+                            <td>Confidence</td>
+                            <td>d/100</td>
+                        </tr>
+                        <tr><td>Rock</td><td><span id="rockConfidence"></span></td><td><span id="rockRoll"></span></td></tr>
+                        <tr><td>Paper</td><td><span id="paperConfidence"></span></td><td><span id="paperRoll"></span></td></tr>
+                        <tr><td>Scissors</td><td><span id="scissorsConfidence"></span></td><td><span id="scissorsRoll"></span></td></tr>
+                        <tr><td>Lizard</td><td><span id="lizardConfidence"></span></td><td><span id="lizardRoll"></span></td></tr>
+                        <tr><td>Spock</td><td><span id="spockConfidence"></span></td><td><span id="spockRoll"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box">
+                <div class="nn-action rock"></div>
+                <div class="nn-action paper"></div>
+                <div class="nn-action scissors"></div>
+                <div class="nn-action lizard"></div>
+                <div class="nn-action spock"></div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.0.8/synaptic.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/javascript" src="js/neural-network.js"></script>
+<script type="text/javascript" src="js/rpsls.js"></script>
+<script type="text/javascript">
+    (() => {
+
+
+    })();
+</script>
+
+</html>

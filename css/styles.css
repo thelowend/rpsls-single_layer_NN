@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'nagurigaki-P';
+    src: url('../fonts/nagurigaki-P.eot');
+    src: url('../fonts/nagurigaki-P.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/nagurigaki-P.woff2') format('woff2'),
+        url('../fonts/nagurigaki-P.woff') format('woff'),
+        url('../fonts/nagurigaki-P.ttf') format('truetype'),
+        url('../fonts/nagurigaki-P.svg#nagurigaki-P') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#preload {
+    background: url(../img/rock-icon-grey.png) no-repeat -9999px -9999px,
+        url(../img/rock-icon-red.png) no-repeat -9999px -9999px,
+        url(../img/rock-icon.png) no-repeat -9999px -9999px,
+        url(../img/paper-icon-grey.png) no-repeat -9999px -9999px,
+        url(../img/paper-icon-red.png) no-repeat -9999px -9999px,
+        url(../img/paper-icon.png) no-repeat -9999px -9999px,
+        url(../img/scissors-icon-grey.png) no-repeat -9999px -9999px,
+        url(../img/scissors-icon-red.png) no-repeat -9999px -9999px,
+        url(../img/scissors-icon.png) no-repeat -9999px -9999px,
+        url(../img/lizard-icon-grey.png) no-repeat -9999px -9999px,
+        url(../img/lizard-icon-red.png) no-repeat -9999px -9999px,
+        url(../img/lizard-icon.png) no-repeat -9999px -9999px,
+        url(../img/spock-icon-grey.png) no-repeat -9999px -9999px,
+        url(../img/spock-icon-red.png) no-repeat -9999px -9999px,
+        url(../img/spock-icon.png) no-repeat -9999px -9999px;
+}
+
+body {
+    background: black;
+    font-family: 'Open Sans', sans-serif;
+}
+.color-red {
+    color: #d9534f;
+}
+.color-green {
+    color: #5cb85c;
+}
+.color-yellow {
+    color: #f0ad4e;
+}
+
+.title {
+    cursor: default;
+    text-align: center;
+    font-family: 'nagurigaki-P';
+    font-size: 4rem;
+    color: rgba(255,255,255,1);
+    margin: 2rem 0 3rem;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de, 0 0 100px #ff00de ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+.title:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff, 0 0 100px #00ffff ;
+}
+.main {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-gap: 10px;
+    width: 1024px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.avatar {
+    height: 200px;
+    width: auto;
+    margin-bottom: 1rem;
+    border-radius: 10%;
+}
+.user {
+    box-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px #5E9B9C, 0 0 60px #5E9B9C, 0 0 70px #5E9B9C, 0 0 80px #5E9B9C;
+}
+.hal {
+    box-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px #A9555A, 0 0 60px #A9555A, 0 0 70px #A9555A, 0 0 80px#A9555A;
+}
+.ruleset img {
+    width: 90%;
+}
+.result {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+    letter-spacing: 1px;
+    width: 60%;
+}
+.result p {
+    display: none;
+    margin: 0;
+    background: #111;
+    padding: 4px 0px;
+    border: solid 2px white;
+    border-radius: 5px;
+
+}
+
+.results-table {
+    border: solid 1px white;
+    margin: 0 auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-header {
+    font-weight: bold;
+    background: #ccc;
+    text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
+}
+.table-header td{
+    border: solid 1px white;
+}
+
+.result p.show {
+    display: block;
+}
+
+.result-details {
+    color: white;
+}
+h4 {
+    text-decoration: underline;
+}
+.result-details ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 4px 10px;
+    border: solid 1px white;
+    background: #111111;
+}
+.result-details ul li span {
+    font-weight: bold;
+}
+
+@keyframes effect_dylan {
+    50% {
+      transform: scale(1.5, 1.5);
+      opacity: 0;
+    }
+    99% {
+      transform: scale(0.001, 0.001);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.001, 0.001);
+      opacity: 1;
+    }
+}
+
+.human-action {
+    cursor: pointer;
+    position: relative;
+}
+.human-action:hover {
+    opacity: .8;
+}
+
+.human-action::before {
+    content: '';
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0.001, 0.001);
+}
+.human-action.activo {
+    outline: 0;
+    color: #fff;
+}
+
+.human-action.activo::before {
+    animation: effect_dylan 0.6s ease-out;
+}
+
+.nn-action, .human-action {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    display: inline-block;
+}
+.nn-action.rock, .human-action.rock {
+    background-image: url(../img/rock-icon-grey.png);
+}
+.nn-action.rock.activo {
+    background-image: url(../img/rock-icon-red.png);
+}
+.human-action.rock.activo {
+    background-image: url(../img/rock-icon.png);
+}
+.nn-action.paper, .human-action.paper {
+    background-image: url(../img/paper-icon-grey.png);
+}
+.nn-action.paper.activo {
+    background-image: url(../img/paper-icon-red.png);
+}
+.human-action.paper.activo {
+    background-image: url(../img/paper-icon.png);
+}
+.nn-action.scissors, .human-action.scissors {
+    background-image: url(../img/scissors-icon-grey.png);
+}
+.nn-action.scissors.activo {
+    background-image: url(../img/scissors-icon-red.png);
+}
+.human-action.scissors.activo {
+    background-image: url(../img/scissors-icon.png);
+}
+.nn-action.lizard, .human-action.lizard {
+    background-image: url(../img/lizard-icon-grey.png);
+}
+.nn-action.lizard.activo {
+    background-image: url(../img/lizard-icon-red.png);
+}
+.human-action.lizard.activo {
+    background-image: url(../img/lizard-icon.png);
+}
+.nn-action.spock, .human-action.spock {
+    background-image: url(../img/spock-icon-grey.png);
+}
+.nn-action.spock.activo {
+    background-image: url(../img/spock-icon-red.png);
+}
+.human-action.spock.activo {
+    background-image: url(../img/spock-icon.png);
+}
+
